@@ -1,7 +1,8 @@
-# from pyspark.sql import SparkSession
-# spark = SparkSession.builder.getOrCreate()
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
 
 print('test1')
-# spark.sql("select 1").display()
+df = spark.sql("select 1")
+print(df.toPandas())
 print('test2')
 
